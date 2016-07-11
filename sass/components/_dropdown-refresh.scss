@@ -1,0 +1,39 @@
+.dropdown-content {
+  @extend .z-depth-1;
+  background-color: #0B0B58;
+  margin: 0;
+  display: none;
+  min-width: 100px;
+  max-height: 650px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  white-space: nowrap; // Force one line
+  z-index: 1;
+  will-change: width, height;
+  border-bottom: #5dc3bc solid 2px;
+
+  li {
+    clear: both;
+    color: $off-black;
+    cursor: pointer;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+
+    &:hover, &.active {
+      // background-color: #eee;
+      & a {
+        color: #5dc3bc !important;
+      }
+    }
+
+    & > a, & > span {
+      font-size: 0.75rem;
+      color: $dropdown-color;
+      display: block;
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}

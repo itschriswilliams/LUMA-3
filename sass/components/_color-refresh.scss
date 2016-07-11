@@ -1,0 +1,29 @@
+/* Color */
+
+// Colors
+$colours: (
+  "black": #000000,
+  "white": #FFFFFF,
+  "tiffany": #5dc3bc,
+  "lt-pale": #FEF2ED,
+  "pale": #E1B7A7,
+  "skyblue": #64CCC9,
+  "marsala": #AD655F,
+  "green": #00BF6F,
+  "lt-grey": #a7a399,
+  "lightgrey": #a7a399,
+  "grey": #D7D2CB,
+  "dk-grey": #63666A,
+  "turq": #3ec2cf,
+  "darkgrey": #63666A
+);
+
+// Color Class Buildout
+@each $colour, $colour_value in $colours {
+  .#{$colour} {
+    background-color: $colour_value !important;
+  }
+  .#{$colour}-text {
+    color: $colour_value !important;
+  }
+}
